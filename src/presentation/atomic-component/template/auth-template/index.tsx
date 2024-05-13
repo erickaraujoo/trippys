@@ -1,57 +1,14 @@
+/* eslint-disable jsx-a11y/control-has-associated-label */
+/* eslint-disable react/jsx-max-depth */
 // eslint-disable-next-line @typescript-eslint/no-restricted-imports
-import { backgroundImage, footer, ntfImg } from 'main/assets';
+import { DiscordLogo, TwitterLogo } from 'phosphor-react';
+import { backgroundImage, bigNft, footer, ntfImg, smallNft } from 'main/assets';
 import type { FC } from 'react';
 
 export const AuthTemplate: FC = () => {
-  const images = [
-    {
-      alt: 'Image 1',
-
-      large: true,
-
-      src: 'https://via.placeholder.com/600x600/FFC107/FFFFFF?text=Image+1'
-    },
-
-    {
-      alt: 'Image 2',
-
-      src: 'https://via.placeholder.com/300x300/E91E63/FFFFFF?text=Image+2'
-    },
-
-    {
-      alt: 'Image 3',
-
-      src: 'https://via.placeholder.com/300x300/673AB7/FFFFFF?text=Image+3'
-    },
-
-    {
-      alt: 'Image 4',
-
-      src: 'https://via.placeholder.com/300x300/2196F3/FFFFFF?text=Image+4'
-    },
-
-    {
-      alt: 'Image 5',
-
-      src: 'https://via.placeholder.com/300x300/009688/FFFFFF?text=Image+5'
-    },
-
-    {
-      alt: 'Image 6',
-
-      src: 'https://via.placeholder.com/300x300/7E5BE9/FFFFFF?text=Image+6'
-    },
-
-    {
-      alt: 'Image 7',
-
-      src: 'https://via.placeholder.com/300x300/D81B60/FFFFFF?text=Image+7'
-    }
-  ];
-
   return (
     <>
-      <div className={'relative min-h-screen'}>
+      <div className={'relative min-h-screen min-w-[100vw]'}>
         <img
           alt={'Road trip illustration with a van, mountains, and text about travel'}
           src={backgroundImage}
@@ -81,39 +38,68 @@ export const AuthTemplate: FC = () => {
         />
       </div>
 
-      <section className={'bg-gray-100 py-12 bg-gradient-to-b from-{#f7f7f7} to-black'}>
-        <div className={'container mx-auto px-4'}>
-          <h2 className={'text-4xl font-bold text-center mb-8'}>Trippys NFT</h2>
+      <div className={'flex p-10 bg-gradient-to-b from-gray-900 via-gray-900 to-black'}>
+        <section className={'mx-auto max-w-[1140px]'}>
+          <div className={'container mx-auto px-4'}>
+            <h2 className={'text-4xl font-bold text-end mb-8 content uppercase text-[#FCFC03]'}>
+              Just trip, what else?
+            </h2>
 
-          <div
-            className={
-              'flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8'
-            }
-          >
-            <div className={'text-center md:text-left'}>
-              <p className={'text-xl mb-4'}>
-                Just trip, what else? Trippys NFT is about fun and good vibes, always trying to hit
-                a laugh and sometimes reflections. Let's wander through what imagination, the
-                unspeakable and maybe a little bit of psychoactives can show us with the stylish
-                collection pieces. Have fun!!
-              </p>
+            <div
+              className={
+                'flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8'
+              }
+            >
+              <div className={'text-center md:text-left'}>
+                <p className={'text-xl mb-4 text-white'}>
+                  Just trip, what else? Trippys NFT is about fun and good vibes, always trying to
+                  hit a laugh and sometimes reflections. Let's wander through what imagination, the
+                  unspeakable and maybe a little bit of psychoactives can show us with the stylish
+                  collection pieces. Have fun!!
+                </p>
 
-              <p className={'text-xl mb-4'}>
-                Follow us on Twitter so you don't miss any updates and Set your NFT, until our next
-                trip!
-              </p>
-            </div>
+                <div className={' w-full grid grid-cols-7 gap-4 p-4'}>
+                  <div className={'col-span-3 row-span-2'}>
+                    <img alt={''} src={bigNft} />
+                  </div>
 
-            <div className={'md:w-1/3'}>
-              <img
-                alt={'Trippys NFT'}
-                className={'w-full h-auto rounded-lg'}
-                src={'path/to/trippys-nft-image.png'}
-              />
+                  <div className={'col-span-2 row-span-2'}>
+                    <div className={'grid grid-cols-3 gap-4'}>
+                      <img alt={''} className={'w-full'} src={smallNft} />
+                      <img alt={''} className={'w-full'} src={smallNft} />
+                      <img alt={''} className={'w-full'} src={smallNft} />
+                      <img alt={''} className={'w-full'} src={smallNft} />
+                      <img alt={''} className={'w-full'} src={smallNft} />
+                      <img alt={''} className={'w-full'} src={smallNft} />
+                    </div>
+                  </div>
+                </div>
+
+                <p className={'text-xl mb-4 text-white'}>
+                  Follow us on Twitter so you don't miss any updates and Set your NFT, until our
+                  next trip!
+                </p>
+
+                <div className={'flex justify-center md:justify-start gap-3'}>
+                  <a
+                    className={'inline-flex items-center px-4 py-2 border border-[#FCFC03] '}
+                    href={'https://twitter.com/trippysnft'}
+                  >
+                    <TwitterLogo color={'#FCFC03'} size={24} />
+                  </a>
+
+                  <a
+                    className={'inline-flex items-center px-4 py-2 border border-[#FCFC03]'}
+                    href={'https://twitter.com/trippysnft'}
+                  >
+                    <DiscordLogo color={'#FCFC03'} size={24} />
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
 
       <footer>
         <img
