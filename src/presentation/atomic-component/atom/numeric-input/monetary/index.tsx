@@ -1,4 +1,3 @@
-/* eslint-disable react/boolean-prop-naming */
 import { NumericFormat } from 'react-number-format';
 import { TextField } from '@mui/material';
 import type { ChangeEvent, FC } from 'react';

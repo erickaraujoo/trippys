@@ -1,5 +1,3 @@
-/* eslint-disable react/boolean-prop-naming */
-/* eslint-disable react-hooks/rules-of-hooks */
 import { MonetaryInput } from './monetary';
 import { NumericFormat } from 'react-number-format';
 import { TextField } from '@mui/material';

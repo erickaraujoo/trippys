@@ -37,6 +37,9 @@ export default {
         base: '0px 0px 7px 2px rgba(0,0,0,0.2)'
       }
     },
+    fontFamily: {
+      superCool: ['Super Cool']
+    },
     screens: {
       desktop: '1281px',
       laptop: '1024px',

@@ -1,4 +1,3 @@
-/* eslint-disable no-negated-condition */
 /* eslint-disable jsx-a11y/control-has-associated-label */
 import { Menu } from '@mui/material';
 import { MoreVert } from '@mui/icons-material';

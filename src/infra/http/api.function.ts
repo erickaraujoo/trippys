@@ -8,7 +8,6 @@ const baseUrl = import.meta.env.VITE_API_URL;
 
 export const fetchApi = async <T>(params: ApiProps): Promise<T> => {
   const accessToken = decryptData(store.getState().persist.accessToken || '');
-
   const body: any = params.isFormData ? params.body : JSON.stringify(params.body);
   const headers = {};
 

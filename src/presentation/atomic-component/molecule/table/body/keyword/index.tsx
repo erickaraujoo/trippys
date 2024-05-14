@@ -3,7 +3,6 @@ import { TableBody, TableRow } from '@mui/material';
 import type { FC } from 'react';
 
 interface KeywordTableProps {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   query: {
     content: { id: string }[];
   };
